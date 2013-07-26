@@ -1,0 +1,44 @@
+{% extends "site_base.html" %}
+
+{% load i18n %}
+{% load bootstrap_tags %}
+
+{% block title %}{% trans "Newsletter subscribe" %}{% endblock title %}
+
+{% block body %}
+<div class='row'>
+	<div class='span8 subscribeform'>
+		<h1>{% trans "Subscribe to" %} {{ newsletter.title }}</h1>
+
+		{% if error %}
+			<p>{% trans "Due to a technical error we were not able to submit your confirmation email. This could be because your email address is invalid." %}</p>
+			{% comment %} Replace the the following dummy with a valid email address and remove this comment.
+
+			<p>{% trans "If the error persists, please don't hesitate to contact us at the following email address:" %} <a href="mailto:info@wyomafilms.com">info@wyomafilms.com</a></p>
+
+			{% endcomment %}
+		{% else %}
+			{% if form.is_valid %}
+				<p>{% trans "Your subscription was successfully recieved and an activation email has been sent to you. In that email you will find a link which you need to follow in order to activate your subscription." %}</p>
+				{% else %}
+				<form {% if form.is_multipart %} enctype="multipart/form-data"{% endif %} method="post" action="." class='form-horizontal'>
+				    {% csrf_token %}
+				    {{ form|as_bootstrap }}
+
+				    <div class="form-actions">
+					    <p><input id="id_submit" class="btn btn-primary" name="submit" value="{% trans "Subscribe" %}" type="submit" /></p>
+				    </div>
+				</form>
+			{% endif %}
+		{% endif %}
+	</div>
+</div>
+{% endblock body %}
+
+{% block extra_script %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_name_field').focus();
+        });
+    </script>
+{% endblock %}

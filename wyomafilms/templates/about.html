@@ -1,0 +1,17 @@
+{% extends 'site_base.html' %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "About" %}{% endblock %}
+
+{% block body %}
+
+<div class='hero-unit'>
+	<h1>About Wyoma Films</h1>
+	<img class='pull-right' style='width: 640px; margin-left: 10px; margin-bottom: 10px;' src='{{ STATIC_URL}}img/hipsterbanner.jpg'>
+
+	<p>Wyoma Films is a Film, Television, Commercial, and Web Content Development and Production company based out of Los Angeles, CA. The company was founded in January, 2007 by Mario and Chris Guerrero.</p>
+
+	<p>Our mission is to create innovative and engaging original content that redefines traditional mediums.</p>
+</div>
+{% endblock %}

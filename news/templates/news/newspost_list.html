@@ -1,0 +1,27 @@
+{% extends 'site_base.html' %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "News" %}{% endblock %}
+
+{% block body %}
+
+	{% for post in object_list %}
+		<div class='news-item container' onclick="window.open('{{ post.link }}', false);">
+			<div class='row'>
+				<img class='span4' src='{{ post.image.url }}'>
+
+				<div class='span8'>
+					<h2 class='news-title'>{{ post.title }}</h2>
+					<p class='news-date'>{{ post.pub_date }}</p>
+
+					<p class='news-blurb'>{{ post.blurb }}</p>
+
+						<a class='news-link' href='{{ post.link }}' target='_blank'>{{ post.link }}</a>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+
+
+{% endblock %}

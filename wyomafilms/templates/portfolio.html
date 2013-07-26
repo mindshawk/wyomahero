@@ -1,0 +1,43 @@
+{% extends 'site_base.html' %}
+{% load url from future %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Portfolio" %}{% endblock %}
+
+{% block body %}
+<div class='container'>
+  <div class='row'>
+
+    <div class='video-player span9'>
+      <img class='pull-left' style='width: 640px;' src="http://b.vimeocdn.com/ts/274/228/274228892_295.jpg">
+    </div>
+    <div class='span3' id='playlist'>
+      <img title='I Am Sun-Maid' src='http://b.vimeocdn.com/ts/355/544/355544908_295.jpg'>
+      <img title='The Hipster Games' src='http://b.vimeocdn.com/ts/274/228/274228892_295.jpg'>
+      <img title='Mini-Mansions Monk' src='http://b.vimeocdn.com/ts/140/934/140934371_295.jpg'>
+      <img title='Siri Explained' src='http://b.vimeocdn.com/ts/217/510/217510513_295.jpg'>
+    </div>
+
+
+  </div>
+  <div class="video-description">
+    <h4>Description of selected video</h4>
+  </div>
+</div>
+
+{% block extra_script %}
+  <script type='text/javascript' src="{{ STATIC_URL }}js/jquery.slimscroll.js"></script>
+
+  <script type='text/javascript'>
+    $(document).ready(function(){
+        $('#playlist').slimScroll({
+            height: '400px'
+        });
+    });
+  </script>
+{% endblock %}
+
+
+
+
+{% endblock %}

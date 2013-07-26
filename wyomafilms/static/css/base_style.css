@@ -1,0 +1,387 @@
+/* Base CSS Styling for WyomaFilms.com written by Glen Baker */
+
+/* 
+	GLOBAL Styling
+*/
+
+
+section {
+  padding-top: 60px;
+}
+.modal form {
+  margin-bottom: 0px;
+}
+#footer {
+  margin-top: 80px;
+}
+#footer p {
+  margin-bottom: 0;
+}
+#footer p.right {
+  float: right;
+}
+
+body {
+	background-image: url('../img/wyomaback2.png');
+	background-size: 100%;
+}
+
+html, body {
+	height: 100%;
+	max-height: 960px;
+
+    /* Verdana-based sans serif stack */
+    font-family: Corbel, "Lucida Grande", 
+                "Lucida Sans Unicode", "Lucida Sans", 
+                "DejaVu Sans", "Bitstream Vera Sans", 
+                "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+}
+
+#header:hover {
+    cursor: pointer;
+}
+
+footer {
+	padding-top: 20px;
+	height: 40px;
+
+}
+
+#wrapper {
+	min-height: 100%;
+}
+
+#main {
+	padding-bottom:150px; /* this needs to be bigger than footer height*/
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.hero-unit {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/*
+	Nav UI Styling
+*/
+.navbar .nav {
+    background-image: none;
+    background-color: none;
+}
+
+.navigation div {
+
+}
+
+/* Non-Active Pill Links */
+.nav-pills>li>a {
+	color: #000;
+    border-color: #C9960C;
+}
+
+/* Pill Links on Hover */
+.nav-pills>li>a:hover {
+	color: #08c;
+
+}
+
+/* Active Pill Links */
+.nav-pills>.active>a {
+	color: #000;
+}
+
+/* Active Pill Links on Hover */
+.nav-pills>.active>a:hover {
+    
+}
+
+.nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover, .nav > li.dropdown.open.active > a:focus {
+    color: #ffffff;
+    background-color: #08c;
+    border-color: #C9960C;
+}
+
+.nav-pills a,
+.nav-pills li a {
+    font-size: 150%;
+}
+
+
+/*  BLURB Styling */
+
+.blurb {
+    height: 300px;
+    background-image: url('../img/cloud.png');
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    
+    margin-top: 20px;
+    
+    padding-bottom: 20px;
+    padding-top: 40px;
+
+    opacity:.75;
+    filter:alpha(opacity=75); /* For IE8 and earlier */
+
+}
+
+.blurb:hover {
+    
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
+
+    cursor: pointer; 
+}
+
+.blurb-text {
+    padding-right: 50px;
+    padding-left: 50px;
+    padding-top: 25px;
+
+    text-align: center;
+
+}
+
+.selected {
+    opacity:1;
+    filter:alpha(opacity=100); /* For IE8 and earlier */
+}
+
+/* ACCOUNT */
+
+.account {
+    background-color: #fff;
+}
+
+.loginform {
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#signup_form {
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+}
+
+/* ABOUT */
+
+.portrait {
+    background-color: #fff;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+}
+
+.portrait:hover {
+
+}
+
+/* NEWSLETTER */
+
+.subscribeform {
+    background-color: #fff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+/* Video Player Styling */
+
+#playlist {
+    /* These settings keep everything looking right while jquery loads up */
+    overflow: hidden;
+    height: 400px;
+}
+
+.vjs-default-skin { color: #c9d96b }
+.vjs-play-progress, .vjs-volume-level { background-color: #b2d4e6 }
+.vjs-control-bar, .vjs-big-play-button { background: rgba(38,140,217,0.7) }
+.vjs-slider { background: rgba(38,140,217,0.2333333333333333) }
+.vjs-control-bar { font-size: 103% }
+
+
+/* News Styling */
+.news-item {
+    /* border-bottom: 1px solid black; */
+
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;    
+    padding-top: 1px;
+
+}
+
+.news-item:hover {
+    background-color: #fff;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black; 
+
+
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 9px;
+    padding-top: 0;
+
+    cursor: pointer; 
+
+    
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.news-title {
+
+}
+
+.news-date {
+    text-decoration: underline;
+}
+
+.news-description {
+
+}
+
+.news-link {
+
+}
+
+/*
+
+
+code {
+    margin: 0 2px;
+    padding: 0 5px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+}
+
+code, pre {
+    font: 13px/22px 'Courier New', Courier, Monaco, monospace;
+}
+
+pre {
+    background: #efefef;
+    border: 1px solid #e0e0e0;
+    color: #303030;
+    padding: 20px;
+    margin: 20px 0;
+    overflow: auto;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.video-holder {
+    background: #1b1b1b;
+    padding: 10px;
+}
+.centered {
+    width: 960px;
+    margin: 30px auto 0;
+}
+
+.playlist-components {
+    height: 264px;
+}
+.video-js, .playlist-components {
+    display: inline-block;
+    vertical-align: top;
+}
+.button-holder {
+    padding: 10px;
+    height: 36px;
+}
+
+.playlist {
+    height: 220px;
+    width: 310px;
+    overflow-y: auto;
+    color: #c0c0c0;
+    border-radius: 8px;
+    display: block;
+    margin: 5px 0;
+    padding: 1px 0 0 0;
+    position: relative;
+    background: -moz-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#000),color-stop(19%,#212121),color-stop(100%,#212121));
+    background: -o-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
+    background: -ms-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
+    background: linear-gradient(to bottom,#000 0,#212121 19%,#212121 100%);
+    box-shadow: 0 1px 1px #1a1a1a inset,0px 1px 1px #454545;
+    border: 1px solid #1a1a18;
+}
+#next {
+    float: right;
+}
+#prev {
+    float: left;
+}
+
+#prev, #next {
+    cursor: pointer;
+}
+
+.playlist ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.playlist ul li {
+    padding: 10px;
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+}
+.playlist ul li.active {
+    background-color: #4f4f4f;
+    border-color: #4f4f4f;
+    color: #FFF;
+}
+.playlist ul li:hover {
+    border-color: #353535;
+    background: #353535;
+}
+
+
+.playlist .poster, .playlist .title  {
+    display: inline-block;
+    vertical-align: middle;
+}
+ .playlist .number{
+    padding-right: 10px;
+}
+.playlist .poster img {
+    width: 64px;
+}
+.playlist .title {
+    padding-left: 10px;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+

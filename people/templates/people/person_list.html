@@ -1,0 +1,38 @@
+{% extends 'site_base.html' %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "About" %}{% endblock %}
+
+{% block body %}
+	
+	<div class='hero-unit'>
+		<h1>About Wyoma Films</h1>
+		<img class='pull-right' style='width: 640px; margin-left: 10px; margin-bottom: 10px;' src='{{ STATIC_URL}}img/hipsterbanner.jpg'>
+
+		<p>Wyoma Films is a Film, Television, Commercial, and Web Content Development and Production company based out of Los Angeles, CA. The company was founded in January, 2007 by Mario and Chris Guerrero.</p>
+
+		<p>Our mission is to create innovative and engaging original content that redefines traditional mediums.</p>
+	</div>
+
+	
+
+	{% for person in object_list %}
+		<div class='container'>
+
+				<div class='span4'>
+					<div class=' portrait'>
+						<img class='' style='width: 300px; height: 300px;' src='{{ person.image.url }}'>
+			
+						<h2>{{ person.name }}</h2>
+						<h3>{{ person.title }}</h3>
+						<a href='mailto:{{ person.email }}'>{{ person.email }}</a>
+						<h5>{{ person.fun_fact }}</h5>
+						<p>{{ person.bio }}</p>
+						<a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a>
+					</div>
+				</div>
+		</div>
+	{% endfor %}
+	
+{% endblock %}

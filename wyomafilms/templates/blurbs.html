@@ -1,0 +1,24 @@
+<div id='sticky-blurbs' class='container'>
+	<div class='row'>
+        <div class='span4 blurb {% if request.endpoint == 'indevelopment' %}selected{% endif %}' onclick="window.open('/indevelopment', '_self', false);">
+	        <h2 class='blurb-text'>In The Works: Mike Garcia and The Cruz - The Rundown</h2>
+        </div>
+
+        <div class='span4 blurb {% if request.endpoint == 'news' %}selected{% endif %}' onclick="window.open('http://www.studiosystemnews.com/five-directors-to-watch/', false);">
+	        <h2 class='blurb-text'>Off The Wire: Five Directors to Discover Online</h2>
+        </div>
+
+        <div class='span4 blurb' onclick="window.open('/contact', '_self', false);">
+	        <h2 class='blurb-text'>We're accepting new clients, contact us{% if request.endpoint == 'contact' %} above{% else %} here{% endif %}!</h2>
+        </div> 
+    </div>
+</div>
+
+
+<script type='text/javascript'>
+	<!--// Blurb script tracks selected state in blurbs //-->
+	$('div.blurb').click(function(){
+		$(this).removeClass('selected');
+		$(this).addClass('selected');
+	});
+</script>
