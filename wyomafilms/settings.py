@@ -84,6 +84,8 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
 )
 
 ROOT_URLCONF = 'wyomafilms.urls'
@@ -94,6 +96,11 @@ WSGI_APPLICATION = 'wyomafilms.wsgi.application'
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'),
 )
+
+TEMPLATE_CONTEXT_PROCESSORS = [
+    'django.contrib.auth.context_processors.auth',
+    "account.context_processors.account",
+]
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -107,7 +114,34 @@ INSTALLED_APPS = (
     # utility
     'django_extensions',
     'south',
+
+    # django user accounts
+    'account',
+
+    # forms
+    #'crispy_forms',
+    #'floppyforms',
+    'django_forms_bootstrap',
+
+    # wyoma apps
+    'people',
+
+
+
 )
+
+########################### Email ###################################
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'iepathos@gmail.com'
+EMAIL_HOST_PASSWORD = 'stinkywiggler'
+EMAIL_SUBJECT_PREFIX = '[wyomafilms.com]'
+DEFAULT_FROM_EMAIL = 'Glen <iepathos@gmail.com>'
+SERVER_EMAIL = 'iepathos@gmail.com'
+
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

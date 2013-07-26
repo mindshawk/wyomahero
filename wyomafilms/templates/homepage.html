@@ -1,10 +1,11 @@
 {% extends "banner_base.html" %}
 
 {% load i18n %}
+{% load url from future %}
 
 {% block head_title %}{% trans "Welcome" %}{% endblock %}
 
-{% block body_class %}home{% endblock %}
+load{% block body_class %}home{% endblock %}
 
 {% block body %}
     <div class="hero-unit">
@@ -13,12 +14,12 @@
     <h1>{% trans "Welcome to Wyoma Films" %}</h1>
     <p>
        
-        Peruse our <a href="{% url portfolio %}">portfolio</a>, please.  Enjoy and <a href='#'>share</a>
+        Peruse our <a href="{% url 'portfolio' %}">portfolio</a>, please.  Enjoy and <a href='#'>share</a>
         with your friends.  Find out what we're working on
         right now and get excited because we think it's our finest work yet.
 
         We made a <a href='http://www.kickstarter.com/projects/chrisguerrero/mike-garcia-and-the-cruz-a-punk-rock-usc-thesis-fi'>Kickstarter project</a> and raised $10,736 to produce
-        <a href="{% url indevelopment %}">Mike Garcia and The Cruz</a>.  We've been putting this
+        <a href="{% url 'indevelopment' %}">Mike Garcia and The Cruz</a>.  We've been putting this
         money to good use.  We already have a lot of amazing shots.  Check out behind the scenes footage and photos on our <a href='http://facebook.com/wyomafilms'>Facebook/wyomafilms</a> or <a href='http://twitter.com/wyomafilms'>Twitter/wyomafilms - @wyomafilms</a>.
     </p>
     

@@ -22,9 +22,9 @@
         </li>
     {% else %}
         <li><a href="/newsletter/wyoma-films/subscribe">Subscribe</a></li>
-        <li><a href="{% url "account_login" %}">{% trans "Log in" %}</a></li>
+        <li><a href="{% url 'account_login' %}">{% trans "Log in" %}</a></li>
         {% if ACCOUNT_OPEN_SIGNUP %}
-            <li><a href="{% url "account_signup" %}">{% trans "Sign up" %}</a></li>
+            <li><a href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></li>
         {% endif %}
     {% endif %}
 </ul>
