@@ -131,6 +131,10 @@ INSTALLED_APPS = (
     #'floppyforms',
     'django_forms_bootstrap',
 
+    # newsletter
+    'sorl.thumbnail',
+    'newsletter',
+    
     # wyoma apps
     'people',
     'news',
