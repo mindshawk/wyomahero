@@ -8,6 +8,7 @@
 {% endblock %}
 
 
+{% load current from navigation %}
 
 {% block navigation %}	
 
@@ -17,11 +18,11 @@
 
 	{% block nav %}
 		<ul class="nav nav-pills">
-		    <li class=""><a href="{% url 'portfolio' %}">Portfolio</a></li>
-		    <li class=""><a href="{% url 'news' %}">News</a></li>
-		    <li class=""><a href="{% url 'about' %}">About</a></li>
-		    <li class=""><a href="{% url 'contact' %}">Contact</a></li>
-		    <li class=""><a href="{% url 'indevelopment' %}">In Development</a></li>
+		    <li class="{% current 'portfolio' %}"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+		    <li class="{% current 'news' %}"><a href="{% url 'news' %}">News</a></li>
+		    <li class="{% current 'about' %}"><a href="{% url 'about' %}">About</a></li>
+		    <li class="{% current 'contact' %}"><a href="{% url 'contact' %}">Contact</a></li>
+		    <li class="{% current 'indevelopment' %}"><a href="{% url 'indevelopment' %}">In Development</a></li>
 		</ul>
 	{% endblock %}
 
