@@ -16,7 +16,7 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': '',                      # Or path to database file if using sqlite3.
         # The following settings are not used with sqlite3:
         'USER': '',
@@ -47,8 +47,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-MEDIA_ROOT = ''
-MEDIA_URL = ''
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', "site_media", "media")
+MEDIA_URL = "/site_media/media/"
 
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
@@ -98,7 +98,14 @@ TEMPLATE_DIRS = (
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = [
-    'django.contrib.auth.context_processors.auth',
+    "django.contrib.auth.context_processors.auth",
+    "django.core.context_processors.debug",
+    "django.core.context_processors.i18n",
+    "django.core.context_processors.media",
+    "django.core.context_processors.static",
+    "django.core.context_processors.tz",
+    "django.core.context_processors.request",
+    "django.contrib.messages.context_processors.messages",
     "account.context_processors.account",
 ]
 
@@ -125,6 +132,7 @@ INSTALLED_APPS = (
 
     # wyoma apps
     'people',
+    'news',
 
 
 
@@ -179,3 +187,16 @@ import dj_database_url
 
 
 DATABASES['default'] =  dj_database_url.config(default='postgres://eiwilleudnztat:EDRt934f0LTTDhhDNXtzUkGopK@ec2-54-227-238-34.compute-1.amazonaws.com:5432/d46dmpqc72h52u')
+
+ACCOUNT_OPEN_SIGNUP = False
+ACCOUNT_USE_OPENID = False
+ACCOUNT_REQUIRED_EMAIL = False
+ACCOUNT_EMAIL_VERIFICATION = False
+ACCOUNT_EMAIL_AUTHENTICATION = False
+ACCOUNT_LOGIN_REDIRECT_URL = "home"
+ACCOUNT_LOGOUT_REDIRECT_URL = "home"
+ACCOUNT_EMAIL_CONFIRMATION_EXPIRE_DAYS = 2
+
+AUTHENTICATION_BACKENDS = [
+    "account.auth_backends.UsernameAuthenticationBackend",
+]
