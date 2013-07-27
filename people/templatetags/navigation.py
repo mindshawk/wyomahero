@@ -1,3 +1,4 @@
+# Templatetag for tracking current page in navigation links
 from django import template
 from django.core import urlresolvers
  

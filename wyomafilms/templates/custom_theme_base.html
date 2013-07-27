@@ -9,6 +9,10 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
         {% endblock %}
 
+        {% block favicon %}
+            <link rel="shortcut icon" href="{{ STATIC_URL }}favicon.ico">
+        {% endblock %}
+
         {% block style_base %}
 
             <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
