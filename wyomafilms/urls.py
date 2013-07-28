@@ -23,7 +23,9 @@ urlpatterns = patterns('',
 
     url(r'contact/', include('core.urls')),
     #url(r'contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
-    
+
+    url(r'thanks/', TemplateView.as_view(template_name='thanks.html'), name='thanks'),
+
     url(r'indevelopment/', TemplateView.as_view(template_name="indevelopment.html"), name="indevelopment"),
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
