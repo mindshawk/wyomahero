@@ -14,6 +14,7 @@ class Person(models.Model):
 	title = models.CharField(max_length=80)
 	email = models.EmailField(max_length=200)
 	linkedin = models.URLField(max_length=200)
+	vimeo = models.URLField(max_length=200, blank=True)
 
 	image = models.ImageField(upload_to=get_image_path)
 

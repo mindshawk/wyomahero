@@ -29,7 +29,10 @@
 						<a href='mailto:{{ person.email }}'>{{ person.email }}</a>
 						<h5>{{ person.fun_fact }}</h5>
 						<p>{{ person.bio }}</p>
-						<a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a>
+						<p><a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a></p>
+						{% if person.vimeo %}
+							<p><a href='{{ person.vimeo }}' target='_blank'>View Vimeo</a></p>
+						{% endif %}
 					</div>
 				</div>
 		</div>

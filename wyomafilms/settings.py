@@ -134,8 +134,9 @@ INSTALLED_APPS = (
     # newsletter
     'sorl.thumbnail',
     'newsletter',
-    
+
     # wyoma apps
+    'core',
     'people',
     'news',
 

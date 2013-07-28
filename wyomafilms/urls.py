@@ -20,7 +20,10 @@ urlpatterns = patterns('',
     url(r'portfolio/', TemplateView.as_view(template_name="portfolio.html"), name="portfolio"),
     url(r'news/', include('news.urls')),
     url(r'about/', include('people.urls')),
-    url(r'contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
+
+    url(r'contact/', include('core.urls')),
+    #url(r'contact/', TemplateView.as_view(template_name="contact.html"), name="contact"),
+    
     url(r'indevelopment/', TemplateView.as_view(template_name="indevelopment.html"), name="indevelopment"),
 )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
