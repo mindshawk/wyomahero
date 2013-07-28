@@ -13,7 +13,7 @@ class Person(models.Model):
 	name = models.CharField(max_length=80)
 	title = models.CharField(max_length=80)
 	email = models.EmailField(max_length=200)
-	linkedin = models.URLField(max_length=200)
+	linkedin = models.URLField(max_length=200, blank=True)
 	vimeo = models.URLField(max_length=200, blank=True)
 
 	image = models.ImageField(upload_to=get_image_path)
@@ -21,6 +21,7 @@ class Person(models.Model):
 	fun_fact = models.CharField(max_length=200, blank=True)
 
 	bio = models.TextField()
+	extra_bio = models.TextField(blank=True)
 
 	def save(self):
 		if not self.image:

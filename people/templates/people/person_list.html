@@ -15,15 +15,13 @@
 		<p>Our mission is to create innovative and engaging original content that redefines traditional mediums.</p>
 	</div>
 
-	
 
-	{% for person in object_list %}
-		<div class='container'>
-
+	<div class='container'>
+		<div class='row'>
+			{% for person in object_list %}
 				<div class='span4'>
 					<div class=' portrait'>
 						<img class='' style='width: 300px; height: 300px;' src='{{ person.image.url }}'>
-			
 						<h2>{{ person.name }}</h2>
 						<h3>{{ person.title }}</h3>
 						<a href='mailto:{{ person.email }}'>{{ person.email }}</a>
@@ -31,13 +29,18 @@
 							<h5>{{ person.fun_fact }}</h5>
 						{% endif %}
 						<p>{{ person.bio }}</p>
-						<p><a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a></p>
+						{% if person.extra_bio %}
+							<p>{{ person.extra_bio }}</p>
+						{% endif %}
+						{% if person.linkedin %}
+							<p><a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a></p>
+						{% endif %}
 						{% if person.vimeo %}
 							<p><a href='{{ person.vimeo }}' target='_blank'>View Vimeo</a></p>
 						{% endif %}
 					</div>
 				</div>
+			{% endfor %}				
 		</div>
-	{% endfor %}
-	
+	</div>
 {% endblock %}
