@@ -1,14 +1,35 @@
 {% extends 'site_base.html' %}
 
+{% load url from future %}
 {% load i18n %}
+{% load bootstrap_tags %}
 
-{% block head_title %}{% trans "Contact" %}{% endblock %}
+{% block head_title %}{% trans "Contact Wyoma Films" %}{% endblock %}
 
 {% block body %}
-<h2>Contact Form</h2>
+    <div class="row">
+        <div class="span8 contactform">
+            <form method="POST" action="{% url 'contact' %}" autocapitalize="off" class="form-horizontal"{% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                <h1>{% trans "Contact Wyoma Films" %}</h1>
+                {% csrf_token %}
+                {{ form|as_bootstrap }}
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+                </div>
+            </form>
+        </div>
+        <div class="span4">
+            <h2>Or call us during our normal office hours 9AM - 6PM Pacific PST. Monday - Friday.</h2>
+            <h3>Telephone: <a href='tel:213.545.1902'>(213)545-1902</a></h3>
+            <img src="{{ STATIC_URL }}img/doitwyoma.png">
+        </div>
+    </div>
+{% endblock %}
 
-
-<div class='contact-info'>
-	<a href='tel:213-545-1902'><tel>Phone: (213)545-1902</tel></a>
-</div>
+{% block extra_script %}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#id_subject').focus();
+        });
+    </script>
 {% endblock %}

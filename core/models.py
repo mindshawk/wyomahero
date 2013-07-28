@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 
-from django.core.urlresolvers import reverse
+
+"""
 
 class Contact(models.Model):
 	first_name = models.CharField(max_length=80)
@@ -17,6 +18,4 @@ class Contact(models.Model):
 		ordering = ('-timestamp',)
 		verbose_name = 'Contact'
 		verbose_name_plural = 'Contacts'
-
-	def get_absolute_url(self):
-		return reverse('contact_detail', kwargs={'email': self.email})
+"""
