@@ -150,11 +150,11 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'iepathos@gmail.com'
-EMAIL_HOST_PASSWORD = 'stinkywiggler'
+EMAIL_HOST_USER = 'info@wyomafilms.com'
+EMAIL_HOST_PASSWORD = 'punkrock45'
 EMAIL_SUBJECT_PREFIX = '[wyomafilms.com]'
-DEFAULT_FROM_EMAIL = 'Glen <iepathos@gmail.com>'
-SERVER_EMAIL = 'iepathos@gmail.com'
+DEFAULT_FROM_EMAIL = 'Wyoma FIlms <info@wyomafilms.com>'
+SERVER_EMAIL = 'info@wyomafilms.com'
 
 
 # A sample logging configuration. The only tangible logging
