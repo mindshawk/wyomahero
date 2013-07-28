@@ -27,7 +27,9 @@
 						<h2>{{ person.name }}</h2>
 						<h3>{{ person.title }}</h3>
 						<a href='mailto:{{ person.email }}'>{{ person.email }}</a>
-						<h5>{{ person.fun_fact }}</h5>
+						{% if person.fun_fact %}
+							<h5>{{ person.fun_fact }}</h5>
+						{% endif %}
 						<p>{{ person.bio }}</p>
 						<p><a href='{{ person.linkedin }}' target='_blank'>View Linkedin</a></p>
 						{% if person.vimeo %}

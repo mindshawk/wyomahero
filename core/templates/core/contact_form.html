@@ -14,16 +14,15 @@
                 <h1>{% trans "Contact Wyoma Films" %}</h1>
                 {% csrf_token %}
                 {{ form|as_bootstrap }}
-                {% if redirect_field_value %}
-                    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
                 <div class="form-actions">
                     <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
                 </div>
             </form>
         </div>
         <div class="span4">
-            
+            <h2>Or call us during our normal office hours 9AM - 6PM Pacific PST. at:</h2>
+            <h2> <a href='tel:213.545.1902'>(213)545-1902</a></h2>
+            <img src="{{ STATIC_URL }}img/doitwyoma.png">
         </div>
     </div>
 {% endblock %}

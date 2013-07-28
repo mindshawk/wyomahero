@@ -18,7 +18,7 @@ class Person(models.Model):
 
 	image = models.ImageField(upload_to=get_image_path)
 
-	fun_fact = models.CharField(max_length=200)
+	fun_fact = models.CharField(max_length=200, blank=True)
 
 	bio = models.TextField()
 
