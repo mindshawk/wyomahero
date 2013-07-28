@@ -22,8 +22,7 @@ section {
 }
 
 body {
-    background-color: #F0F0F0;
-
+    background: url('../img/white_subtle_texture.jpg') repeat;
 }
 
 html, body {
