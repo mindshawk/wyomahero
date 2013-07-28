@@ -22,8 +22,7 @@ section {
 }
 
 body {
-	background-image: url('');
-	background-size: 100%;
+
 }
 
 html, body {
@@ -35,6 +34,7 @@ html, body {
                 "Lucida Sans Unicode", "Lucida Sans", 
                 "DejaVu Sans", "Bitstream Vera Sans", 
                 "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+
 }
 
 #header:hover {
@@ -62,6 +62,9 @@ footer {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+
+    margin-top: 0;
+    padding-top: 0;
 }
 
 /*
