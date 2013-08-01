@@ -18,31 +18,27 @@
     <ul class="nav span4" id="videos">
       {% for video in object_list %}
         <li class="row {% if forloop.counter == 1 %}active{% endif %}">            
-          <a href="#vid{{ forloop.counter }}"><img style='width: 200px;' class='thumbnail pull-left' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
+          <a href="#vid{{ forloop.counter }}"><img style='width: 200px;' class='' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
         </li>
       {% endfor %}
     </ul>
 
-
-    <!-- Set last in list to active -->
-    <script>
-      $(function () {
-        $('#videos a:last').tab('show');
-      })
-    </script>
-
   </div>
 
 {% block extra_script %}
-
+  <!-- Set last in list to active -->
+  <script>
+    $(function () {
+      $('#videos a:last').tab('show');
+    });
+  </script>
 
   <!-- Activate Portfolio Tabbable -->
   <script type='text/javascript'>
     $('#videos a').click(function (e) {
       e.preventDefault();
       $(this).tab('show');
-    })
-
+    });
   </script>
 {% endblock %}
 
