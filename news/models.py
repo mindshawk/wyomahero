@@ -23,8 +23,8 @@ class NewsPost(models.Model):
 	image = models.ImageField(upload_to=get_image_path)
 
 	def save(self):
-		#self.slug = slugify(self.title)
-		#self.modified = datetime.now
+		self.slug = slugify(self.title)
+		self.modified = datetime.now
 		if not self.image:
 			return
 

@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     'core',
     'people',
     'news',
+    'videos',
 
 
 

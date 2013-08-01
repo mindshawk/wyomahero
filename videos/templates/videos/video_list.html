@@ -1,0 +1,52 @@
+{% extends 'site_base.html' %}
+{% load url from future %}
+{% load i18n %}
+
+{% block head_title %}{% trans "Portfolio" %}{% endblock %}
+
+{% block body %}
+
+  <div class='row'>
+    <div class="tab-content span8">
+      {% for video in object_list %}
+        <div class="tab-pane {% if forloop.counter == 1 %}active{% endif %}" id="vid{{ forloop.counter }}">
+          <iframe src="{{ video.embed_url }}" width="770" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+        </div>
+      {% endfor %}
+    </div>
+
+    <ul class="nav span4" id="videos">
+      {% for video in object_list %}
+        <li class="{% if forloop.counter == 1 %}active{% endif %}">            
+          <a href="#vid{{ forloop.counter }}"><img style='width: 150px;' class='thumbnail pull-left' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+
+    <!-- Set last in list to active -->
+    <script>
+      $(function () {
+        $('#videos a:last').tab('show');
+      })
+    </script>
+
+  </div>
+
+{% block extra_script %}
+
+
+  <!-- Activate Portfolio Tabbable -->
+  <script type='text/javascript'>
+    $('#videos a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    })
+
+  </script>
+{% endblock %}
+
+
+
+
+{% endblock %}

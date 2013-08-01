@@ -17,7 +17,8 @@ urlpatterns = patterns('',
 
     url(r'newsletter/', include('newsletter.urls')),
 
-    url(r'portfolio/', TemplateView.as_view(template_name="portfolio.html"), name="portfolio"),
+    #url(r'portfolio/', TemplateView.as_view(template_name="portfolio.html"), name="portfolio"),
+    url(r'portfolio/', include('videos.urls')),
     url(r'news/', include('news.urls')),
     url(r'about/', include('people.urls')),
 

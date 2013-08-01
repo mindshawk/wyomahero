@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 
 
 class Video(models.Model):
-	name = models.CharField(_('Name'), max_length=100)
+	title = models.CharField(_('Name'), max_length=100)
 	slug = models.SlugField(unique=True, editable=False)
 	embed_url = models.URLField(_('Embedded URL'), blank=True, max_length=200)
 	thumbnail_url = models.URLField(_('Thumbnail URL'), blank=True, max_length=200)
@@ -17,10 +17,10 @@ class Video(models.Model):
 	view_count = models.IntegerField(default=0, editable=False)
 
 	def __unicode__(self):
-		return self.name
+		return self.title
 
 	def save(self, *args, **kwargs):
-		self.slug = slugify(self.name) # set slug to self
+		self.slug = slugify(self.title) # set slug to self
 		self.modified = datetime.now
 		super(Video, self).save(*args, **kwargs)
 
