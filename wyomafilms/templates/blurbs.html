@@ -1,14 +1,14 @@
 <div id='sticky-blurbs' class='container'>
 	<div class='row'>
-        <div class='span4 blurb {% if request.endpoint == 'indevelopment' %}selected{% endif %}' onclick="window.open('/indevelopment', '_self', false);">
+        <div class="span4 blurb {% if request.get_full_path == '/indevelopment/' %}selected{% endif %}" onclick="window.open('/indevelopment', '_self', false);">
 	        <h2 class='blurb-text'>In The Works: Mike Garcia and The Cruz - The Rundown</h2>
         </div>
 
-        <div class='span4 blurb {% if request.endpoint == 'news' %}selected{% endif %}' onclick="window.open('http://www.studiosystemnews.com/five-directors-to-watch/', false);">
+        <div class="span4 blurb {% if request.get_full_path == '/news/' %}selected{% endif %}" onclick="window.open('/news', '_self', false);">
 	        <h2 class='blurb-text'>Off The Wire: Five Directors to Discover Online</h2>
         </div>
 
-        <div class='span4 blurb' onclick="window.open('/contact', '_self', false);">
+        <div class="span4 blurb {% if request.get_full_path == '/contact/' %}selected{% endif %}" onclick="window.open('/contact', '_self', false);">
 	        <h2 class='blurb-text'>We're accepting new clients, contact us{% if request.endpoint == 'contact' %} above{% else %} here{% endif %}!</h2>
         </div> 
     </div>

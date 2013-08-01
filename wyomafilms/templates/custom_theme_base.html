@@ -35,7 +35,10 @@
     <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">
 
         <div class="{% block wrapper_class %}{% endblock %}">
-        <img id='header' src="{% static 'img/newwyomalogo.png' %}" style='width:100%' onclick="window.open('{% url 'home' %}', '_self', false);">
+        <!--
+        <img id='header' src="{% static 'img/wyoma_plain_text.png' %}" style='width:100%;' onclick="window.open('{% url 'home' %}', '_self', false);"> -->
+        <header class='header' onclick="window.open('/', '_self', false);"><h1>Wyoma Films</h1></header>
+        <div class='breaker'>&nbsp;</div>
 
             {% block navigation %}
                 <div class="navbar {% block navbar_class %}navigation{% endblock %}">
@@ -73,8 +76,6 @@
                     {% endblock %}
                     {% block footer_base %}
                         {% include 'blurbs.html' %}
-
-                        <hr />
                         <footer>
                             {% block footer %}{% endblock %}
                         </footer>
@@ -89,6 +90,25 @@
 
             <script src="{% static 'js/bootstrap.min.js' %}"></script>
             <script src="{% static 'js/custom_theme.js' %}"></script>
+
+            <!-- Scroll up icon -->
+            <a class='scrollup' href="#">Scroll</a>
+            <script type='text/javascript'>
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > 100) {
+                        $('.scrollup').fadeIn();
+                    } else {
+                        $('.scrollup').fadeOut();
+                    }
+                });
+
+                $('.scrollup').click(function() {
+                    $("html, body").animate({
+                        scrollTop: 0
+                    }, 200);
+                    return false;
+                });
+            </script>
             {% block extra_script %}{% endblock %}
         {% endblock %}
 

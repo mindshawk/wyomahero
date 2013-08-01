@@ -5,7 +5,7 @@
 {% block head_title %}{% trans "Portfolio" %}{% endblock %}
 
 {% block body %}
-
+  <!--
   <div class='row'>
     <div class='video-player span9'>
       <div class='pull-left' style='width: 100%; height: 400px; background-color: #ccc; display: block;'> </div>
@@ -18,13 +18,14 @@
     </div>
   </div>
 
+
+
   <div class="video-description">
     <h4>Description of selected video</h4>
   </div>
 
 
-{% block extra_script %}
-  <script type='text/javascript' src="{{ STATIC_URL }}js/jquery.slimscroll.js"></script>
+    <script type='text/javascript' src="{{ STATIC_URL }}js/jquery.slimscroll.js"></script>
 
   <script type='text/javascript'>
     $(document).ready(function(){
@@ -32,6 +33,45 @@
             height: '400px'
         });
     });
+  </script>
+
+  -->
+
+  <div class='row'>
+    <div class="tab-content span8">
+      <div class="tab-pane active" id="vid1">I Am Sun-Maid</div>
+      <div class="tab-pane" id="vid2">The Hipster Games</div>
+      <div class="tab-pane" id="vid3">Siri Explained</div>
+      <div class="tab-pane" id="vid4">Mini Mansions - Monk</div>
+    </div>
+
+    <ul class="nav span4" id="videos">
+      <li class="active"><a href="#vid1">I Am Sun-Maid</a></li>
+      <li><a href="#vid2">The Hipster Games</a></li>
+      <li><a href="#vid3">Siri Explained</a></li>
+      <li><a href="#vid4">Mini Mansions - Monk</a></li>
+    </ul>
+
+
+    <!-- Set last in list to active -->
+    <script>
+      $(function () {
+        $('#videos a:last').tab('show');
+      })
+    </script>
+
+  </div>
+
+{% block extra_script %}
+
+
+  <!-- Activate Portfolio Tabbable -->
+  <script type='text/javascript'>
+    $('#videos a').click(function (e) {
+      e.preventDefault();
+      $(this).tab('show');
+    })
+
   </script>
 {% endblock %}
 

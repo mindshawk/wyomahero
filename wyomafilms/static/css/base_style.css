@@ -4,25 +4,47 @@
 	GLOBAL Styling
 */
 
+.header {
+    padding-bottom: 10px;
+    padding-top: 10px;
 
-section {
-  padding-top: 60px;
+    text-align: center;
+
+
 }
-.modal form {
-  margin-bottom: 0px;
+
+.header:hover {
+    cursor: pointer; 
 }
-#footer {
-  margin-top: 80px;
+
+.header h1 {
+    font-size: 500%;
+    letter-spacing: .75em;
 }
-#footer p {
-  margin-bottom: 0;
+
+.scrollup{
+    width:40px;
+    height:40px;
+
+    opacity:0.6;
+    filter:alpha(opacity=60); /* For IE8 and earlier */
+
+    position:fixed;
+    bottom:30px;
+    right:20px;
+    display:none;
+    text-indent:-9999px;
+    background: url('../img/icon_top_blue.png') no-repeat;
 }
-#footer p.right {
-  float: right;
+
+.breaker {
+    border-bottom: 1px solid #08c;
 }
+
+
 
 body {
-    background: url('../img/white_subtle_texture.jpg') repeat;
+    background: url('../img/mooning.png') repeat;
 }
 
 html, body {
@@ -63,8 +85,6 @@ footer {
     -moz-border-radius: 6px;
     border-radius: 6px;
 
-    margin-top: 0;
-    padding-top: 0;
 }
 
 /*
@@ -75,9 +95,6 @@ footer {
     background-color: none;
 }
 
-.navigation div {
-
-}
 
 /* Non-Active Pill Links */
 .nav-pills>li>a {
@@ -94,8 +111,6 @@ footer {
 /* Active Pill Links */
 .nav-pills>.active>a {
 	color: #000;
-    
-    border-bottom: 1px solid black;
 }
 
 /* Active Pill Links on Hover */
