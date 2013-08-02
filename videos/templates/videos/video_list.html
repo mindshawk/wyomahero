@@ -9,7 +9,7 @@
   <div class='row'>
     <div class="tab-content span8">
       {% for video in object_list %}
-        <div class="tab-pane {% if forloop.counter == 1 %}active{% endif %}" id="vid{{ forloop.counter }}">
+        <div class="tab-pane {% if forloop.counter == 0 %}active{% endif %}" id="vid{{ forloop.counter }}">
           <iframe src="{{ video.embed_url }}" width="770" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
         </div>
       {% endfor %}
@@ -17,8 +17,8 @@
 
     <ul class="nav span4" id="videos">
       {% for video in object_list %}
-        <li class="row {% if forloop.counter == 1 %}active{% endif %}">            
-          <a href="#vid{{ forloop.counter }}"><img style='width: 200px;' class='' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
+        <li class="row {% if forloop.counter == 0 %}active{% endif %}">            
+          <a href="#vid{{ forloop.counter }}"><img style='width: 200px;' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
         </li>
       {% endfor %}
     </ul>
@@ -29,7 +29,7 @@
   <!-- Set last in list to active -->
   <script>
     $(function () {
-      $('#videos a:last').tab('show');
+      $('#videos a:first').tab('show');
     });
   </script>
 

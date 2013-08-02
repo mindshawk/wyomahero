@@ -4,6 +4,16 @@
 	GLOBAL Styling
 */
 
+#videos {
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+}
+
+#videos .active {
+    background-color: #fff;
+}
+
 .header {
     padding-bottom: 10px;
     padding-top: 10px;
