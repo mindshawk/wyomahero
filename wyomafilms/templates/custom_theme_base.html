@@ -30,7 +30,7 @@
         <div class="{% block wrapper_class %}{% endblock %}">
         <!--
         <img id='header' src="{% static 'img/wyoma_plain_text.png' %}" style='width:100%;' onclick="window.open('{% url 'home' %}', '_self', false);"> -->
-        <header class='header' onclick="window.open('/', '_self', false);"><h1>Wyoma Films</h1></header>
+        <header onclick="window.open('/', '_self', false);"><img class='header' src='{{ STATIC_URL }}img/wyoma_films_header.png'></header>
         <div class='breaker'>&nbsp;</div>
 
             {% block navigation %}
