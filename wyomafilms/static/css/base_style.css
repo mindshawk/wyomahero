@@ -17,9 +17,8 @@
 
 
 .header {
-
-
-
+    width: 100%;
+    margin-bottom: 10px;
 }
 
 .header:hover {
@@ -42,8 +41,11 @@
     background: url('../img/icon_top_blue.png') no-repeat;
 }
 
-.breaker {
-    border-bottom: 1px solid #08c;
+.nav-breaker {
+    border-bottom: 5px solid #000;
+
+    padding: 0;
+    margin-top: -50px;
 }
 
 
@@ -71,6 +73,7 @@ html, body {
 footer {
 	padding-top: 20px;
 	height: 40px;
+    margin-top: 20px;
 
 }
 
@@ -116,11 +119,12 @@ footer {
 /* Active Pill Links */
 .nav-pills>.active>a {
 	color: #000;
+    background-color: #C9960C;
 }
 
 /* Active Pill Links on Hover */
 .nav-pills>.active>a:hover {
-    
+    background-color: #C9960C;
 }
 
 .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover, .nav > li.dropdown.open.active > a:focus {
@@ -299,124 +303,6 @@ footer {
     width: 620px;
     height: 400px;
 }
-
-/*
-
-
-code {
-    margin: 0 2px;
-    padding: 0 5px;
-    border: 1px solid #ddd;
-    background-color: #f8f8f8;
-    border-radius: 3px;
-}
-
-code, pre {
-    font: 13px/22px 'Courier New', Courier, Monaco, monospace;
-}
-
-pre {
-    background: #efefef;
-    border: 1px solid #e0e0e0;
-    color: #303030;
-    padding: 20px;
-    margin: 20px 0;
-    overflow: auto;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    border-radius: 6px;
-    max-height: 300px;
-    overflow-y: auto;
-}
-
-.video-holder {
-    background: #1b1b1b;
-    padding: 10px;
-}
-.centered {
-    width: 960px;
-    margin: 30px auto 0;
-}
-
-.playlist-components {
-    height: 264px;
-}
-.video-js, .playlist-components {
-    display: inline-block;
-    vertical-align: top;
-}
-.button-holder {
-    padding: 10px;
-    height: 36px;
-}
-
-.playlist {
-    height: 220px;
-    width: 310px;
-    overflow-y: auto;
-    color: #c0c0c0;
-    border-radius: 8px;
-    display: block;
-    margin: 5px 0;
-    padding: 1px 0 0 0;
-    position: relative;
-    background: -moz-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
-    background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#000),color-stop(19%,#212121),color-stop(100%,#212121));
-    background: -o-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
-    background: -ms-linear-gradient(top,#000 0,#212121 19%,#212121 100%);
-    background: linear-gradient(to bottom,#000 0,#212121 19%,#212121 100%);
-    box-shadow: 0 1px 1px #1a1a1a inset,0px 1px 1px #454545;
-    border: 1px solid #1a1a18;
-}
-#next {
-    float: right;
-}
-#prev {
-    float: left;
-}
-
-#prev, #next {
-    cursor: pointer;
-}
-
-.playlist ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.playlist ul li {
-    padding: 10px;
-    border-bottom: 1px solid #000;
-    cursor: pointer;
-}
-.playlist ul li.active {
-    background-color: #4f4f4f;
-    border-color: #4f4f4f;
-    color: #FFF;
-}
-.playlist ul li:hover {
-    border-color: #353535;
-    background: #353535;
-}
-
-
-.playlist .poster, .playlist .title  {
-    display: inline-block;
-    vertical-align: middle;
-}
- .playlist .number{
-    padding-right: 10px;
-}
-.playlist .poster img {
-    width: 64px;
-}
-.playlist .title {
-    padding-left: 10px;
-}
-
-*/
-
 
 
 

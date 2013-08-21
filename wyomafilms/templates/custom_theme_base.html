@@ -30,8 +30,10 @@
         <div class="{% block wrapper_class %}{% endblock %}">
         <!--
         <img id='header' src="{% static 'img/wyoma_plain_text.png' %}" style='width:100%;' onclick="window.open('{% url 'home' %}', '_self', false);"> -->
-        <header onclick="window.open('/', '_self', false);"><img class='header' src='{{ STATIC_URL }}img/wyoma_films_header.png'></header>
-        <div class='breaker'>&nbsp;</div>
+        <header onclick="window.open('/', '_self', false);">
+            <img class='header' src='{{ STATIC_URL }}img/wyoma_films_header.png'>
+        </header>
+
 
             {% block navigation %}
                 <div class="navbar {% block navbar_class %}navigation{% endblock %}">
@@ -47,11 +49,12 @@
                                 <div class="nav-collapse collapse navbar-responsive-collapse nav-pills">
                                     {% block nav %}
                                             <ul class="nav">
-                                                <li><a href="#portfolio">Portfolio</a></li>
-                                                <li><a href="#news">News</a></li>
-                                                <li><a href="#about">About</a></li>
-                                                <li><a href="#contact">Contact</a></li>
                                                 <li><a href="#indevelopment">In Development</a></li>
+                                                <li><a href="#contact">Contact</a></li>
+                                                <li><a href="#about">About</a></li>
+                                                <li><a href="#news">News</a></li>
+                                                <li><a href="#portfolio">Portfolio</a></li>
+                                                
                                             </ul>
                                     {% endblock %}
                                     {% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
@@ -61,6 +64,7 @@
                     </div>
                 </div>
             {% endblock %}
+            <div class='nav-breaker'>&nbsp;</div>
 
             {% block body_base %}
                 <div class="container">
