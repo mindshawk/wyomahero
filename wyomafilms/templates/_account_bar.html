@@ -2,6 +2,8 @@
 {% load account_tags %}
 {% load url from future %}
 
+{% load current from navigation %}
+
 <ul class="nav pull-right nav-pills">
     {% if request.user.is_authenticated %}
         <li class="dropdown">
@@ -21,10 +23,10 @@
             </ul>
         </li>
     {% else %}
-        <li><a href="/newsletter/wyoma-films/subscribe">Subscribe</a></li>
-        <li><a href="{% url 'account_login' %}">{% trans "Log in" %}</a></li>
+        <li class="{% if request.path == '/newsletter/wyoma-films/subscribe/' %}active{% endif %}"><a href="/newsletter/wyoma-films/subscribe">Subscribe</a></li>
+        <li class="{% current 'account_login' %}"><a href="{% url 'account_login' %}">{% trans "Log in" %}</a></li>
         {% if ACCOUNT_OPEN_SIGNUP %}
-            <li><a href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></li>
+            <li class="{% current 'account_signup' %}"><a href="{% url 'account_signup' %}">{% trans "Sign up" %}</a></li>
         {% endif %}
     {% endif %}
 </ul>
