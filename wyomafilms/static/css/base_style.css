@@ -112,7 +112,7 @@ footer {
 
 /* Pill Links on Hover */
 .nav-pills>li>a:hover {
-	color: #08c;
+	color: #C9960C;
 
 }
 
@@ -129,7 +129,7 @@ footer {
 
 .nav-tabs .open .dropdown-toggle, .nav-pills .open .dropdown-toggle, .nav > li.dropdown.open.active > a:hover, .nav > li.dropdown.open.active > a:focus {
     color: #ffffff;
-    background-color: #08c;
+    background-color: #C9960C;
     border-color: #C9960C;
 }
 
