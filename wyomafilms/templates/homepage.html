@@ -8,9 +8,8 @@
 load{% block body_class %}home{% endblock %}
 
 {% block body %}
+    <a href="{% url 'indevelopment' %}"><img src="{{ STATIC_URL }}img/mgatc_landing.jpg" style='width:100%;'></a>
     <div class="hero-unit">
-
-   
     <h1>{% trans "Welcome to Wyoma Films" %}</h1>
     <p>
         Peruse our <a href="{% url 'portfolio' %}">portfolio</a>, please.  Find out what we're working on

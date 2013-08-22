@@ -6,24 +6,20 @@
 
 {% block body %}
 
-  <div class='row'>
-    <div class="tab-content span8">
-      {% for video in object_list %}
-        <div class="tab-pane {% if forloop.counter == 0 %}active{% endif %}" id="vid{{ forloop.counter }}">
-          <iframe src="{{ video.embed_url }}" width="770" height="450" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-        </div>
-      {% endfor %}
+
+  
+  {% for video in object_list %}
+    <div class='row'>
+      <div class="span8 {% if forloop.counter == 0 %}active{% endif %}" id="vid{{ forloop.counter }}">
+        <iframe src="{{ video.embed_url }}" width='100%' height='460' frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+      </div>
+      <div class='span4'>
+        <h2>{{ video.title }}</h2>
+        <p>{{ video.description }}</p>
+      </div>
     </div>
+  {% endfor %}
 
-    <ul class="nav span4" id="videos">
-      {% for video in object_list %}
-        <li class="row {% if forloop.counter == 0 %}active{% endif %}">            
-          <a href="#vid{{ forloop.counter }}"><img style='width: 200px;' src='{{ video.thumbnail_url }}'>{{ video.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-
-  </div>
 
 {% block extra_script %}
   <!-- Set last in list to active -->
