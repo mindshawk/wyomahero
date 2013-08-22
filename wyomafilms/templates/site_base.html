@@ -11,23 +11,23 @@
 {% load current from navigation %}
 
 {% block navigation %}	
-
 	<div class='container' id='navigation' >
 
-	{% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
+		<div class='row'>
 
-	{% block nav %}
-		<ul class="nav nav-pills">
-			<li class="{% current 'indevelopment' %}"><a href="{% url 'indevelopment' %}">In Development</a></li>
-		    <li class="{% current 'contact' %}"><a href="{% url 'contact' %}">Contact</a></li>
-		    <li class="{% current 'about' %}"><a href="{% url 'about' %}">About</a></li>
-		    <li class="{% current 'news' %}"><a href="{% url 'news' %}">News</a></li>
-		    <li class="{% current 'portfolio' %}"><a href="{% url 'portfolio' %}">Portfolio</a></li>
-		</ul>
-		
-	{% endblock %}
+			{% block nav %}
+				<ul class="nav nav-pills span9">
+					<li class="{% current 'indevelopment' %}"><a href="{% url 'indevelopment' %}">In Development</a></li>
+				    <li class="{% current 'contact' %}"><a href="{% url 'contact' %}">Contact</a></li>
+				    <li class="{% current 'about' %}"><a href="{% url 'about' %}">About</a></li>
+				    <li class="{% current 'news' %}"><a href="{% url 'news' %}">News</a></li>
+				    <li class="{% current 'portfolio' %}"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+				</ul>
+				
+			{% endblock %}
 
-
+			{% block account_bar %}{% include "_account_bar.html" %}{% endblock %}
+		</div>
 	</div>
 {% endblock %}
 
