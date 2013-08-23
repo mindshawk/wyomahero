@@ -47,8 +47,8 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-MEDIA_ROOT = os.path.join(BASE_DIR, '..', "site_media", "media")
-MEDIA_URL = "/site_media/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static', "site_media", "media")
+MEDIA_URL = "/static/site_media/media/"
 
 STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
@@ -56,7 +56,7 @@ STATIC_URL = '/static/'
 # Additional locations of static files
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
-    os.path.join(BASE_DIR, '..', 'site_media', 'media'),
+    os.path.join(BASE_DIR, 'static', 'site_media', 'media'),
 )
 
 # List of finder classes that know how to find static files in
