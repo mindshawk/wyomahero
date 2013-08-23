@@ -56,14 +56,12 @@ body {
 
 html, body {
 	height: 100%;
-	max-height: 960px;
 
     /* Verdana-based sans serif stack */
     font-family: Corbel, "Lucida Grande", 
                 "Lucida Sans Unicode", "Lucida Sans", 
                 "DejaVu Sans", "Bitstream Vera Sans", 
                 "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
-
 }
 
 #header:hover {
@@ -72,9 +70,7 @@ html, body {
 
 footer {
 	padding-top: 20px;
-	height: 40px;
-    margin-top: 20px;
-
+	height: 60px;
 }
 
 #wrapper {
@@ -110,15 +106,14 @@ footer {
 /* Non-Active Pill Links */
 .nav-pills>li>a {
 	color: #000;
-
 }
 
 /* Pill Links on Hover */
 .nav-pills>li>a:hover {
     color: #C9960C;
 
-    /*
-    background: url('../img/nav_border.jpg');
+    /* 
+    background: url('../img/blurb_border.jpg');
     background-repeat:no-repeat;
     background-size: cover; */
 
@@ -157,11 +152,6 @@ footer {
     background-repeat:no-repeat;
     
     margin-top: 20px;
-
-    /*
-    padding-bottom: 20px;
-    padding-top: 40px;
-    */
 
     opacity:.75;
     filter:alpha(opacity=75); /* For IE8 and earlier */
@@ -305,8 +295,8 @@ footer {
 }
 
 .newspost-preview {
-    width: 620px;
-    height: 400px;
+    width: 310px;
+    height: 200px;
 }
 
 

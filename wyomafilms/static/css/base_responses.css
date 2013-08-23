@@ -12,9 +12,17 @@
 		padding-right: 10px;
 	}
 
+
+
 }
 
 @media (max-width: 480px) {
 
+	
+	footer {
+		padding-top: 0;
+		height: 40px;
+		margin-top: 0;
+	}
 
 }

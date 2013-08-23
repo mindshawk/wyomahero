@@ -13,11 +13,11 @@ def get_image_path(instance, filename):
     return os.path.join('news', 'blink', filename)
 
 class NewsPost(models.Model):
-	title = models.CharField(max_length=200)
+	title = models.CharField(max_length=255)
 	slug = models.SlugField(unique=True, editable=False)
 	pub_date = models.DateField()
 	blurb = models.TextField()
-	link = models.URLField(max_length=200)
+	link = models.URLField(max_length=255)
 	modified = models.DateTimeField(auto_now=True)
 
 	image = models.ImageField(upload_to=get_image_path)
@@ -31,7 +31,7 @@ class NewsPost(models.Model):
 		super(NewsPost, self).save()
 		image = Image.open(self.image)
 		(width, height) = image.size
-		size = (620, 400)
+		size = (310, 200)
 		image = image.resize(size, Image.ANTIALIAS)
 		image.save(self.image.path)
 
