@@ -32,7 +32,9 @@
         <!--
         <img id='header' src="{% static 'img/wyoma_plain_text.png' %}" style='width:100%;' onclick="window.open('{% url 'home' %}', '_self', false);"> -->
         <header onclick="window.open('/', '_self', false);">
-            <img class='header' src='{{ STATIC_URL }}img/wyoma_films_header.png'>
+            <div class='headerdiv'>
+                <img class='header' src='{{ STATIC_URL }}img/wyoma_films_header.png'>
+            </div>
         </header>
 
 
